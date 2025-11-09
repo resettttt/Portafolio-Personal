@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tu Nombre | Desarrollador</title>
+    <title>Emmanuel Velasquez | Desarrollador de Software</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -231,9 +231,64 @@
             box-shadow: var(--shadow);
         }
 
+        /* Education Section */
+        .education {
+            background: var(--light-color);
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background: var(--secondary-color);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+
+        .timeline-content {
+            padding: 20px 30px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+
+        .timeline-content h3 {
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .timeline-content .date {
+            font-weight: 600;
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+        }
+
         /* Projects Section */
         .projects {
-            background: var(--light-color);
+            background: white;
         }
 
         .projects-grid {
@@ -461,6 +516,20 @@
             .about-image {
                 order: -1;
             }
+
+            .timeline::after {
+                left: 31px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
         }
 
         @media (max-width: 768px) {
@@ -505,13 +574,14 @@
     <header>
         <div class="container">
             <nav class="navbar">
-                <a href="#" class="logo">Tu<span>Nombre</span></a>
+                <a href="#" class="logo">Emmanuel<span>Velasquez</span></a>
                 <div class="menu-toggle">
                     <i class="fas fa-bars"></i>
                 </div>
                 <ul class="nav-links">
                     <li><a href="#home">Inicio</a></li>
                     <li><a href="#about">Sobre Mí</a></li>
+                    <li><a href="#education">Formación</a></li>
                     <li><a href="#projects">Proyectos</a></li>
                     <li><a href="#contact">Contacto</a></li>
                 </ul>
@@ -523,8 +593,8 @@
     <section class="hero" id="home">
         <div class="container">
             <div class="hero-content">
-                <h1>Hola, soy <span>Tu Nombre</span></h1>
-                <p>Desarrollador Full Stack apasionado por crear soluciones innovadoras y experiencias de usuario excepcionales. Especializado en tecnologías modernas y mejores prácticas de desarrollo.</p>
+                <h1>Hola, soy <span>Emmanuel Velasquez</span></h1>
+                <p>Desarrollador de Software en formación, apasionado por la tecnología y con muchas ganas de trabajar y aprender. Especializado en crear soluciones innovadoras con las mejores prácticas de desarrollo.</p>
                 <a href="#projects" class="btn">Ver Mis Proyectos</a>
             </div>
         </div>
@@ -539,23 +609,15 @@
             </div>
             <div class="about-content">
                 <div class="about-text">
-                    <h3>Desarrollador Full Stack con pasión por la tecnología</h3>
-                    <p>Soy un desarrollador con X años de experiencia en la creación de aplicaciones web y móviles. Me especializo en JavaScript, React, Node.js y bases de datos tanto SQL como NoSQL.</p>
-                    <p>Me encanta resolver problemas complejos y aprender nuevas tecnologías. Siempre busco mejorar mis habilidades y mantenerme actualizado con las últimas tendencias en desarrollo.</p>
+                    <h3>Desarrollador de Software con pasión por la tecnología</h3>
+                    <p>Soy Emmanuel Santiago Velasquez Rodriguez, un joven de 21 años de Cali, Colombia, actualmente cursando el 4° semestre de Tecnología en Desarrollo de Sistemas de Información y Software en la Universidad Santiago de Cali.</p>
+                    <p>Me gradué del colegio con buenas notas y desde entonces he mantenido un fuerte interés por la tecnología y el desarrollo de software. Me encanta resolver problemas complejos y aprender nuevas tecnologías constantemente.</p>
                     
                     <div class="skills">
+                        <h3 style="margin-bottom: 20px;">Mis Habilidades</h3>
                         <div class="skill">
                             <div class="skill-name">
-                                <span>JavaScript</span>
-                                <span>90%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-level" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <div class="skill-name">
-                                <span>React</span>
+                                <span>Desarrollo Web</span>
                                 <span>85%</span>
                             </div>
                             <div class="skill-bar">
@@ -564,7 +626,7 @@
                         </div>
                         <div class="skill">
                             <div class="skill-name">
-                                <span>Node.js</span>
+                                <span>JavaScript</span>
                                 <span>80%</span>
                             </div>
                             <div class="skill-bar">
@@ -574,18 +636,74 @@
                         <div class="skill">
                             <div class="skill-name">
                                 <span>HTML/CSS</span>
-                                <span>95%</span>
+                                <span>90%</span>
                             </div>
                             <div class="skill-bar">
-                                <div class="skill-level" style="width: 95%"></div>
+                                <div class="skill-level" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name">
+                                <span>Java</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name">
+                                <span>Base de Datos</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 70%"></div>
                             </div>
                         </div>
                     </div>
                     
-                    <a href="#" class="btn" style="margin-top: 20px;">Descargar CV</a>
+                    <div style="margin-top: 30px;">
+                        <h3 style="margin-bottom: 15px;">Habilidades Blandas</h3>
+                        <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                            <span class="tech-tag">Trabajo en equipo</span>
+                            <span class="tech-tag">Comunicación efectiva</span>
+                            <span class="tech-tag">Resolución de problemas</span>
+                            <span class="tech-tag">Adaptabilidad</span>
+                            <span class="tech-tag">Aprendizaje rápido</span>
+                            <span class="tech-tag">Responsabilidad</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=634&q=80" alt="Tu Foto">
+                    <img src="a14c2b15-93a3-4b6a-8444-ed752d98e6ca.jpg" alt="Emmanuel Velasquez">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="section education" id="education">
+        <div class="container">
+            <div class="section-title">
+                <h2>Formación Académica</h2>
+                <p>Mi trayectoria educativa</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Universidad Santiago de Cali</h3>
+                        <div class="date">2023 - Actualidad</div>
+                        <p>Tecnología en Desarrollo de Sistemas de Información y Software</p>
+                        <p>Actualmente cursando 4° semestre</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Educación Secundaria</h3>
+                        <div class="date">Graduado</div>
+                        <p>Bachiller académico</p>
+                        <p>Graduado con buenas notas y excelente desempeño académico</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -596,22 +714,22 @@
         <div class="container">
             <div class="section-title">
                 <h2>Mis Proyectos</h2>
-                <p>Algunos de mis trabajos más recientes</p>
+                <p>Algunos de mis trabajos académicos y personales</p>
             </div>
             <div class="projects-grid">
                 <!-- Proyecto 1 -->
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=967&q=80" alt="Proyecto 1">
+                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=967&q=80" alt="Sistema de Gestión Académica">
                     </div>
                     <div class="project-info">
-                        <h3>E-commerce App</h3>
-                        <p>Una aplicación completa de comercio electrónico con carrito de compras, pasarela de pago y panel de administración.</p>
+                        <h3>Sistema de Gestión Académica</h3>
+                        <p>Desarrollo de un sistema web para la gestión de estudiantes, materias y calificaciones en entorno educativo.</p>
                         <div class="project-tech">
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">Node.js</span>
-                            <span class="tech-tag">MongoDB</span>
-                            <span class="tech-tag">Stripe</span>
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">HTML/CSS</span>
+                            <span class="tech-tag">JavaScript</span>
                         </div>
                         <div class="project-links">
                             <a href="#"><i class="fab fa-github"></i> Código</a>
@@ -623,16 +741,16 @@
                 <!-- Proyecto 2 -->
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1050&q=80" alt="Proyecto 2">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1050&q=80" alt="Aplicación de Tareas">
                     </div>
                     <div class="project-info">
-                        <h3>Task Manager</h3>
-                        <p>Sistema de gestión de tareas con funciones de colaboración en tiempo real, notificaciones y análisis de productividad.</p>
+                        <h3>Task Manager App</h3>
+                        <p>Aplicación web para gestión de tareas personales con funciones de priorización y recordatorios.</p>
                         <div class="project-tech">
-                            <span class="tech-tag">Vue.js</span>
-                            <span class="tech-tag">Express</span>
-                            <span class="tech-tag">Socket.io</span>
-                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">LocalStorage</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">HTML5</span>
                         </div>
                         <div class="project-links">
                             <a href="#"><i class="fab fa-github"></i> Código</a>
@@ -644,16 +762,16 @@
                 <!-- Proyecto 3 -->
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=1050&q=80" alt="Proyecto 3">
+                        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=1050&q=80" alt="Portafolio Personal">
                     </div>
                     <div class="project-info">
-                        <h3>Weather Dashboard</h3>
-                        <p>Dashboard meteorológico con pronósticos extendidos, mapas interactivos y alertas personalizadas para diferentes ubicaciones.</p>
+                        <h3>Portafolio Personal</h3>
+                        <p>Desarrollo de sitio web personal responsive para mostrar proyectos y habilidades como desarrollador.</p>
                         <div class="project-tech">
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">Chart.js</span>
-                            <span class="tech-tag">API REST</span>
+                            <span class="tech-tag">HTML5</span>
                             <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Responsive</span>
                         </div>
                         <div class="project-links">
                             <a href="#"><i class="fab fa-github"></i> Código</a>
@@ -670,7 +788,7 @@
         <div class="container">
             <div class="section-title">
                 <h2>Contacto</h2>
-                <p>Ponte en contacto conmigo</p>
+                <p>¡Hablemos! Estoy listo para nuevos desafíos</p>
             </div>
             <div class="contact-content">
                 <div class="contact-info">
@@ -680,7 +798,7 @@
                         </div>
                         <div class="contact-text">
                             <h4>Ubicación</h4>
-                            <p>Tu Ciudad, País</p>
+                            <p>Cali, Valle del Cauca, Colombia</p>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -689,7 +807,7 @@
                         </div>
                         <div class="contact-text">
                             <h4>Email</h4>
-                            <p>tu.email@ejemplo.com</p>
+                            <p>velasquezemmanuel900@gmail.com</p>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -698,18 +816,27 @@
                         </div>
                         <div class="contact-text">
                             <h4>Teléfono</h4>
-                            <p>+1 234 567 890</p>
+                            <p>+57 318 431 8987</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Universidad</h4>
+                            <p>Universidad Santiago de Cali</p>
                         </div>
                     </div>
                     <div class="social-links">
+                        <a href="https://www.instagram.com/emmanuel.santia/"><i class="fab fa-instagram"></i></a>
                         <a href="#"><i class="fab fa-github"></i></a>
                         <a href="#"><i class="fab fa-linkedin-in"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
                 <div class="contact-form">
-                    <form>
+                    <form id="contactForm">
                         <div class="form-group">
                             <label for="name">Nombre</label>
                             <input type="text" id="name" class="form-control" required>
@@ -738,39 +865,40 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <h3>Tu Nombre</h3>
-                    <p>Desarrollador Full Stack apasionado por crear soluciones innovadoras y experiencias de usuario excepcionales.</p>
+                    <h3>Emmanuel Velasquez</h3>
+                    <p>Desarrollador de Software en formación, apasionado por la tecnología y con muchas ganas de trabajar y aprender.</p>
                 </div>
                 <div class="footer-column">
                     <h3>Enlaces Rápidos</h3>
                     <ul class="footer-links">
                         <li><a href="#home">Inicio</a></li>
                         <li><a href="#about">Sobre Mí</a></li>
+                        <li><a href="#education">Formación</a></li>
                         <li><a href="#projects">Proyectos</a></li>
                         <li><a href="#contact">Contacto</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h3>Servicios</h3>
+                    <h3>Habilidades</h3>
                     <ul class="footer-links">
                         <li><a href="#">Desarrollo Web</a></li>
-                        <li><a href="#">Aplicaciones Móviles</a></li>
-                        <li><a href="#">Consultoría</a></li>
-                        <li><a href="#">UI/UX Design</a></li>
+                        <li><a href="#">JavaScript</a></li>
+                        <li><a href="#">Java</a></li>
+                        <li><a href="#">Base de Datos</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <h3>Conecta</h3>
                     <div class="social-links">
+                        <a href="https://www.instagram.com/emmanuel.santia/"><i class="fab fa-instagram"></i></a>
                         <a href="#"><i class="fab fa-github"></i></a>
                         <a href="#"><i class="fab fa-linkedin-in"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2023 Tu Nombre. Todos los derechos reservados.</p>
+                <p>&copy; 2024 Emmanuel Santiago Velasquez Rodriguez. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
@@ -819,6 +947,13 @@
                 header.style.background = 'white';
                 header.style.backdropFilter = 'none';
             }
+        });
+
+        // Formulario de contacto
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('¡Gracias por tu mensaje! Te contactaré pronto.');
+            this.reset();
         });
     </script>
 </body>
