@@ -1,6 +1,6 @@
 # Portafolio Personal - Emmanuel Velasquez
 
-🌐 **URL del Portafolio:** https://resetttt.github.io/Portafolio-Personal/
+🌐 **URL del Portafolio:** https://resettttt.github.io/Portafolio-Personal/
 
 ## 👨‍💻 Sobre Mí
 
