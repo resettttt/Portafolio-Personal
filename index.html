@@ -675,7 +675,8 @@
                     </div>
                 </div>
                 <div class="about-image">
-                    <img src="a14c2b15-93a3-4b6a-8444-ed752d98e6ca.jpg" alt="Emmanuel Velasquez">
+                    <!-- Imagen local - Asegúrate de subir tu foto al repositorio -->
+                    <img src="./profile.jpg" alt="Emmanuel Velasquez" onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=634&q=80'">
                 </div>
             </div>
         </div>
@@ -829,10 +830,10 @@
                         </div>
                     </div>
                     <div class="social-links">
-                        <a href="https://www.instagram.com/emmanuel.santia/"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-github"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/emmanuel.santia/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/resetttt" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
                 <div class="contact-form">
@@ -890,10 +891,10 @@
                 <div class="footer-column">
                     <h3>Conecta</h3>
                     <div class="social-links">
-                        <a href="https://www.instagram.com/emmanuel.santia/"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-github"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/emmanuel.santia/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/resetttt" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
             </div>
@@ -955,6 +956,11 @@
             alert('¡Gracias por tu mensaje! Te contactaré pronto.');
             this.reset();
         });
+
+        // Detectar si estamos en GitHub Pages
+        if (window.location.hostname === 'resetttt.github.io') {
+            console.log('Ejecutando en GitHub Pages');
+        }
     </script>
 </body>
 </html>
