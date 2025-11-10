@@ -14,7 +14,7 @@ Soy Emmanuel Santiago Velasquez Rodriguez, Desarrollador de Software en formaci�
 ## 🛠️ Habilidades Técnicas
 
 - **Desarrollo Web:** HTML5, CSS3, JavaScript
-- **Backend:** Java
+- **Backend:** Java, python
 - **Bases de Datos:** MySQL
 - **Herramientas:** Git, GitHub
 
